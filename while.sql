@@ -1,8 +1,8 @@
 -- MYSQL WHILE DONGUSU KULLANIMI
 -- SART OLUNA KADAR DEGER DONER
 
-PROCEDURLER KULLANIMI
--------------------------------------------------------|
+--PROCEDURLER KULLANIMI
+
 DELIMITTER //
 CREATE PROCEDURE ABC()
 BEGIN
@@ -17,6 +17,9 @@ SELECT X;
 
 END//
 DELIMITTER ;
+
+CALL ABC()
+
 -------------------------------------------------------|
 DELIMITTER //
 CREATE PROCEDURE ABC(IN SAYI INT,INOUT DEGER VARCHAR)
@@ -33,4 +36,8 @@ END WHILE;
 
 END//
 DELIMITTER ;
+
+SET @B = '' ;
+CALL ABC(20,@B);
+SELECT @B
 -------------------------------------------------------|
